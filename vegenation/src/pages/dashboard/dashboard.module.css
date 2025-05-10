@@ -95,7 +95,7 @@
   font-size: 18px;
   color: black;
   padding: 16px;
-  background-color: #B1D9AA;
+  background-color: white;
 }
 
 
@@ -104,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1px;
 }
 
 .articleCard {
@@ -113,6 +113,8 @@
   padding: 8px;
   text-align: center;
   flex: 1; /* Artikel card mengambil ruang yang ada */
+  height: 250px;
+  width: 380px;
 }
 
 .articleImage {
@@ -146,10 +148,10 @@
   background-color: #3D8D7A;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 8px;
 }
 
 .navButton:hover {
@@ -205,7 +207,15 @@
   padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: #3D8D7A;
+  color: white;
 }
+
+.chatInput::placeholder {
+  color: white;
+  opacity: 1;
+}
+
 
 .chatbotWrapper {
   flex: 1;
@@ -217,14 +227,72 @@
 .sendButton {
   padding: 8px 12px;
   border-radius: 8px;
-  background-color: #555555;
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .sendButton:hover {
-  background-color: #7e807e;
+  background-color: #B1D9AA;
 }
 
 
+/* Modern Chat Bubble */
+.userMessageWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.botMessageWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.botAvatar {
+  border-radius: 50%;
+}
+
+/* User bubble */
+.userMessage {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 16px 16px 0 16px;
+  max-width: 70%;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Bot bubble */
+.botMessage {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 16px 16px 16px 0;
+  max-width: 70%;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.helpText {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  animation: fadeIn 0.5s ease;
+}

@@ -32,7 +32,7 @@ const ArticleCarousel: React.FC<Props> = ({ articles, index, onPrev, onNext }) =
       <div className={styles.articleCard}>
 
         {/* Gambar */}
-        <div style={{ position: 'relative', width: '100%', height: 120, borderRadius: 8, overflow: 'hidden' }}>
+        <div style={{ position: 'relative', width: '100%', height: 110, borderRadius: 8, overflow: 'hidden' }}>
           <Image
             src={article.img_url}
             alt={article.title}
