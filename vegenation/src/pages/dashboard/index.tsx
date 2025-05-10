@@ -7,7 +7,7 @@ import AreaPriceChart from '../components/Chart/AreaPriceChart'; // ✅ Tambahan
 import PriceSummaryCard from '../components/Chart/PriceSummaryCard';
 import ArticleCarousel from '../components/Articles/ArticlesCarousel';
 import ChatBot from '../components/Chatbot/Chatbot';
-import { fetchPrediction, fetchArticles } from '../lib/api';
+import { fetchPrediction, fetchArticles } from '@/lib/api';
 import { parseISO, format, startOfWeek, startOfMonth } from 'date-fns';
 
 const aggregateData = (data: ChartItem[], mode: 'day' | 'week' | 'month') => {

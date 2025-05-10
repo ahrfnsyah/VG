@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '@/pages/dashboard/dashboard.module.css';
-import { sendChatMessage } from '@/pages/lib/api';
+import { sendChatMessage } from '@/lib/api';
 import Image from 'next/image';
 
 const ChatBot: React.FC = () => {
